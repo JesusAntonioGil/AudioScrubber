@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct ContentView: View {
-    @State private var progress: CGFloat = 0
+    @State private var progress: CGFloat = 0.5
     
     
     var body: some View {
@@ -22,8 +22,11 @@ struct ContentView: View {
                         } onGestureActive: { status in
                             
                         }
+                        .frame(height: 60)
                     }
                 }
+                
+                Slider(value: $progress)
             }
             .navigationTitle("Waveform Scrubber")
         }
