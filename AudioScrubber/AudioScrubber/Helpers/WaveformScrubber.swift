@@ -36,6 +36,17 @@ struct WaveformScrubber: View {
     @State private var lastProgress: CGFloat = 0
     @GestureState private var isActive: Bool = false
     
+    init(config: Config = .init(),
+         url: URL,
+         progress: Binding<CGFloat>,
+         info: @escaping (AudioInfo) -> Void,
+         onGestureActive: @escaping (Bool) -> Void) {
+        self.config = config
+        self.url = url
+        self._progress = progress
+        self.info = info
+        self.onGestureActive = onGestureActive
+    }
     
     var body: some View {
         ZStack {
@@ -81,6 +92,7 @@ struct WaveformScrubber: View {
             initializeAudioFile(newValue)
         }
     }
+    
 }
 
 
