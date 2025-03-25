@@ -11,7 +11,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		0BCD224B2D92B3CE0047F12B /* AudioScrubber */ = {
+		0BCD226F2D92B5170047F12B /* AudioScrubber */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = AudioScrubber;
 			sourceTree = "<group>";
@@ -32,7 +32,7 @@
 		0BCD22402D92B3CE0047F12B = {
 			isa = PBXGroup;
 			children = (
-				0BCD224B2D92B3CE0047F12B /* AudioScrubber */,
+				0BCD226F2D92B5170047F12B /* AudioScrubber */,
 				0BCD224A2D92B3CE0047F12B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,7 +61,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				0BCD224B2D92B3CE0047F12B /* AudioScrubber */,
+				0BCD226F2D92B5170047F12B /* AudioScrubber */,
 			);
 			name = AudioScrubber;
 			packageProductDependencies = (

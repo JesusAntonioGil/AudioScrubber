@@ -7,17 +7,33 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
+    @State private var progress: CGFloat = 0
+    
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            List {
+                if let audioURL {
+                    Section("audio.mp3") {
+                        WaveformScrubber(url: audioURL, progress: $progress) { info in
+                            print(info.duration)
+                        } onGestureActive: { status in
+                            
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Waveform Scrubber")
         }
-        .padding()
+    }
+    
+    var audioURL: URL? {
+        Bundle.main.url(forResource: "audio", withExtension: "mp3")
     }
 }
+
 
 #Preview {
     ContentView()
